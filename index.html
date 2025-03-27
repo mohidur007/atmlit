@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Device Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Akij Textile Mills Ltd. IT Device Inventory Management</h1>
+    </header>
+    
+    <main>
+        <section class="form-section">
+            <h2>Add New Device</h2>
+            <form id="deviceForm">
+                <input type="text" id="deviceName" placeholder="Device Name" required>
+                <input type="text" id="deviceType" placeholder="Device Type" required>
+                <input type="text" id="deviceBrand" placeholder="Device Brand" required>
+                <input type="number" id="deviceQuantity" placeholder="Quantity" required>
+                <input type="text" id="deviceCondition" placeholder="Condition (New/Used)" required>
+		
+                <button type="submit">Add Device</button>
+            </form>
+        </section>
+
+        <section class="inventory-section">
+            <h2>Device Inventory</h2>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Search by Name or Type" onkeyup="searchDevices()" />
+            </div>
+
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Device Name</th>
+                        <th>Device Type</th>
+                        <th>Brand</th>
+                        <th>Quantity</th>
+                        <th>Condition</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows will appear here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Akij Textile Mills Ltd.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
